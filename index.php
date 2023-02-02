@@ -15,6 +15,8 @@ if ($conn->connect_error) {
 echo "Connected successfully";
 $query = "select * from patients";
 $result = mysqli_query($conn,$query);
+$query1 = "select * from ambulances WHERE id_ambulance = '003'";
+$result1 = mysqli_query($conn,$query1);
 ?>
 <!DOCTYPE html>
 <html>
@@ -137,6 +139,11 @@ div.end{
   <hr>
   <?php 
   $row = mysqli_fetch_assoc($result) ?>
+   <?php 
+  $row1 = mysqli_fetch_assoc($result1) ?>
+  <?php $latdata = $row1['Ambulance_latitude']; ?>
+  <?php $lngdata = $row1['Ambulance_longitude']; ?>
+
   <div class="w3-container">
     <h5>Vital Signs </h5>
     <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
@@ -174,6 +181,19 @@ div.end{
     </table><br>
     <a href="try.php">Try Here</a>
   </div>
+  <script>var map, infoWindow;
+  var lat = "<?= json_encode($latdata) ?>";
+  var lng = "<?= json_encode($lngdata) ?>";
+    
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat, lng},
+        zoom: 10
+      });
+      infoWindow = new google.maps.InfoWindow;
+      
+    }
+      </script>
   <hr>
   
   <hr>
