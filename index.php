@@ -195,8 +195,8 @@ background-color:green;
   <script>var map, infoWindow;
   var lat1 = '<?= $latdata ?>';
   var lng1 = '<?= $lngdata ?>';
-  var lat = parseInt(lat1);
-  var lng = parseInt(lng1);
+  var lat = parseFloat(lat1);
+  var lng = parseFloat(lng1);
    var pos = {lat,lng};
     function initMap() {
       map = new google.maps.Map(document.getElementById('map'), {
