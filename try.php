@@ -55,7 +55,7 @@ div.end{
   <hr>
   
   <hr>
-  <form action="insert.php" method="post">
+  <form class="myForm" action="insert.php" method="post">
     <div class="w3-container">
       <h5>Vital Signs </h5>
       <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
@@ -99,8 +99,8 @@ div.end{
         </tr>
         
       </table><br>
-      <input type="text" name="latitude" id="latitude" value="">
-      <input type="text" name="longitude" id="longitude" value="">
+      latitude:<input type="text" name="latitude">
+      longtiude:<input type="text" name="longitude">
     </div>
     <Center>
       <input type="submit" value="Submit">
@@ -114,29 +114,7 @@ div.end{
   
   <br>
   <script>
-// Get the DIV with overlay effect
-var overlayBg = document.getElementById("myOverlay");
-
-// Toggle between showing and hiding the sidebar, and add overlay effect
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-    overlayBg.style.display = "none";
-  } else {
-    mySidebar.style.display = 'block';
-    overlayBg.style.display = "block";
-  }
-}
-
-// Close the sidebar with the close button
-function w3_close() {
-  mySidebar.style.display = "none";
-  overlayBg.style.display = "none";
-}
-
-// google map location ...................................................
-
-    // Note: This example requires that you consent to location sharing when
+      // Note: This example requires that you consent to location sharing when
       // prompted by your browser. If you see the error "The Geolocation service
       // failed.", it means you probably did not give permission for the browser to
       // locate you.
@@ -155,6 +133,9 @@ function w3_close() {
               lat: position.coords.latitude,
               lng: position.coords.longitude
             };
+
+            document.querySelector('.myForm input[name = "latitude"]').value = pos.lat;
+            document.querySelector('.myForm input[name = "longitude"]').value = pos.lng;
 
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
@@ -178,9 +159,13 @@ function w3_close() {
         infoWindow.open(map);
       }
 
+      
+      
+      
 
-
-  </script>
-
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBcK2Fk4blUOsBUsb1jhJ1jv-hYVaTBqZ0&callback=initMap">
+    </script>
 </body>
 </html>
