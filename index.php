@@ -12,7 +12,7 @@ $conn = new mysqli($servername, $username, $password, $DBName);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-echo "Connected successfully";
+
 $query = "select * from patients";
 $result = mysqli_query($conn,$query);
 $query1 = "select * from ambulances WHERE id_ambulance = '003'";
@@ -163,30 +163,34 @@ background-color:green;
         </td>
 
         <td>Oxgyn Saturation</td>
-        <td><?php echo $row['Respiration']; ?></td>
+        <td><?php echo $row['Respiration']; ?> breathe/min
+        </td>
       </tr>
       <tr>
         <td><img src="https://db-measuers.oss-me-central-1.aliyuncs.com/imgs/thermometer.svg" height="100" width="100"></td>
         <td>Tempretature</td>
-        <td><?php echo $row['Temperature']; ?></td>
+        <td><?php echo $row['Temperature']; ?> C
+        </td>
       </tr>
       <tr>
         <td><img src="https://db-measuers.oss-me-central-1.aliyuncs.com/imgs/oxygen-breath.svg" height="100" width="100"></td>
 
         <td>Respiratory Rate</td>
-        <td><?php echo $row['Oxygen_saturation']; ?></td>
+        <td><?php echo $row['Oxygen_saturation']; ?> % </td> 
       </tr>
       <tr>
         <td><img src="https://db-measuers.oss-me-central-1.aliyuncs.com/imgs/heart-electrocardiogram-1.svg" height="100" width="100"></td>
 
         <td>Heart Rate</td>
-        <td><?php echo $row['Heart_beat']; ?></td>
+        <td><?php echo $row['Heart_beat']; ?> beats/min
+        </td>
       </tr>
       <tr>
         <td><img src="https://db-measuers.oss-me-central-1.aliyuncs.com/imgs/pressure-meter.svg" height="100" width="100"></td>
 
         <td>Blood Pressure</td>
-        <td><?php echo $row['Pressure']; ?></td>
+        <td><?php echo $row['Pressure']; ?> mm Hg
+        </td>
       </tr>
       
     </table><br>
@@ -200,7 +204,7 @@ background-color:green;
    var pos = {lat,lng};
     function initMap() {
       map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat, lng},
+        center: {lat: 23.708824, lng: 90.364691},
         zoom: 10
       });
       infoWindow = new google.maps.InfoWindow;
