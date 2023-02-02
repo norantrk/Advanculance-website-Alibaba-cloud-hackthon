@@ -99,8 +99,10 @@ div.end{
         </tr>
         
       </table><br>
-      latitude:<input type="text" name="latitude">
-      longtiude:<input type="text" name="longitude">
+      <input type="hidden" name="latitude">
+      <input type="hidden" name="longitude">
+      <p>Geo Location</p>
+      <div id="map"></div>
     </div>
     <Center>
       <input type="submit" value="Submit">
