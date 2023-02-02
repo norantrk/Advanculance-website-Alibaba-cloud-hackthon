@@ -50,7 +50,7 @@ div.end{
 
   <!-- Header -->
   <header class="w3-container" style="padding-top:22px">
-    <h5><b><i class="fa fa-dashboard"></i> Vital measuares</b></h5>
+    <h5><b><i class="fa fa-dashboard"></i> Vital Measuares</b></h5>
   </header>
   <hr>
   
