@@ -67,7 +67,7 @@ function w3_close() {
 var i=0;
       function divchnage(){
         var divtag=document.getElementById("divStage");
-        var bgcolor=["green","orange","darkseagreen"];
+        var bgcolor=["blue","grey","aqua"];
         divtag.style.backgroundColor=bgcolor[i];
         i=(i+1)%bgcolor.length;
       }
