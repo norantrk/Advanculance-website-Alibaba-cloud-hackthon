@@ -13,7 +13,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$query = "select * from patients";
+$query = "select * from patients WHERE id_patients = '0003'";
 $result = mysqli_query($conn,$query);
 $query1 = "select * from ambulances WHERE id_ambulance = '003'";
 $result1 = mysqli_query($conn,$query1);
