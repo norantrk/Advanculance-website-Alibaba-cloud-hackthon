@@ -36,8 +36,8 @@
 		// here our table name is college
 		$sql = "INSERT INTO patients (Pressure,Oxygen_saturation,Temperature,Heart_beat,Respiration) VALUES ('$Pressure','$Oxygen_saturation','$Temperature','$Heart_beat','$Respiration')";
 		$sql2="UPDATE ambulances SET Ambulance_latitude = $latitude, Ambulance_longitude = $longitude WHERE id_ambulance = '003'";
-		if(mysqli_query($conn, $sql, $sql2)){
-			echo "<h3>data stored in a database successfully."
+		if(mysqli_query($conn, $sql)){
+			echo "<h3> {Vital data stored in a database successfully."
 				. " Please browse the admin"
 				. " to view the updated data</h3>";
 
@@ -45,7 +45,16 @@
 			echo "ERROR: Hush! Sorry $sql. "
 				. mysqli_error($conn);
 		}
-		
+
+		if(mysqli_query($conn, $sql2)){
+			echo "<h3> {Location data stored in a database successfully."
+				. " Please browse the admin"
+				. " to view the updated data</h3>";
+
+		} else{
+			echo "ERROR: Hush! Sorry $sql2. "
+				. mysqli_error($conn);
+		}
 		// Close connection
 		mysqli_close($conn);
 		?>
