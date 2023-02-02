@@ -50,7 +50,7 @@ div.end{
   margin: 0 auto;
 }
 #divStage{
-background-color: darkseagreen;
+background-color: grey;
 }
 
 #divHealth{
@@ -94,6 +94,7 @@ background-color:green;
       <div id="divStage" class="w3-container w3-padding-16">
         <div class="w3-left"><i class="material-icons w3-xxxlarge">zoom_out_map</i></div>
         <div class="w3-right">
+          <h3>50</h3>
         </div>
         <div class="w3-clear"></div>
         <h4>Stage</h4>
@@ -103,7 +104,7 @@ background-color:green;
       <div id="divHealth" class="w3-container w3-padding-16">
         <div class="w3-left"><i class="material-icons w3-xxxlarge">person_outline</i></div>
         <div class="w3-right">
-          
+         <h3>60</h3>
         </div>
         <div class="w3-clear"></div>
         <h4>Health Status</h4>
@@ -113,6 +114,7 @@ background-color:green;
       <div id="divTraffic" class="w3-container w3-padding-16">
         <div class="w3-left"><i class="material-icons w3-xxxlarge">my_location</i></div>
         <div class="w3-right">
+          <h3>70</h3>
         </div>
         <div class="w3-clear"></div>
         <h4>Traffic</h4>
@@ -122,7 +124,7 @@ background-color:green;
       <div id="divEqu" class="w3-container w3-padding-16">
         <div class="w3-left"><i class="material-icons w3-xxxlarge">battery_full</i></div>
         <div class="w3-right">
-          
+          <h3>30</h3>
         </div>
         <div class="w3-clear"></div>
         <h4>Equipment Condition</h4>
