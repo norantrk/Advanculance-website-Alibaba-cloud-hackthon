@@ -50,6 +50,10 @@
 			echo "<h3> {Location data stored in a database successfully."
 				. " Please browse the admin"
 				. " to view the updated data</h3>";
+		<?php
+		header("Location: https://www.advanculance.site/");
+		exit();
+		?>
 
 		} else{
 			echo "ERROR: Hush! Sorry $sql2. "
