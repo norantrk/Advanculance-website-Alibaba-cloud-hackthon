@@ -143,6 +143,7 @@ div.end{
   $row1 = mysqli_fetch_assoc($result1) ?>
   <?php $latdata = $row1['Ambulance_latitude']; ?>
   <?php $lngdata = $row1['Ambulance_longitude']; ?>
+  <?php echo $latdata; ?>
 
   <div class="w3-container">
     <h5>Vital Signs </h5>
@@ -182,8 +183,8 @@ div.end{
     <a href="try.php">Try Here</a>
   </div>
   <script>var map, infoWindow;
-  var lat = "<?= json_encode($latdata) ?>";
-  var lng = "<?= json_encode($lngdata) ?>";
+  var lat = '<?= $latdata ?>';
+  var lng = '<?= $lngdata ?>';
     
     function initMap() {
       map = new google.maps.Map(document.getElementById('map'), {
