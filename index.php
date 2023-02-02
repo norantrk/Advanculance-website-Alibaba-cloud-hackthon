@@ -49,7 +49,19 @@ div.end{
   background-color:lightgray;
   margin: 0 auto;
 }
+#divStage{
+background-color: darkseagreen;
+}
 
+#divHealth{
+background-color: green;
+}
+#divTraffic{
+background-color: green;
+}
+#divEqu{
+background-color:green;
+}
 
 </style>
 </head>
@@ -79,40 +91,38 @@ div.end{
 
   <div class="w3-row-padding w3-margin-bottom">
     <div class="w3-quarter">
-      <div class="w3-container w3-red w3-padding-16">
+      <div id="divStage" class="w3-container w3-padding-16">
         <div class="w3-left"><i class="material-icons w3-xxxlarge">zoom_out_map</i></div>
         <div class="w3-right">
-          <h3>52</h3>
         </div>
         <div class="w3-clear"></div>
         <h4>Stage</h4>
       </div>
     </div>
     <div class="w3-quarter">
-      <div class="w3-container w3-blue w3-padding-16">
+      <div id="divHealth" class="w3-container w3-padding-16">
         <div class="w3-left"><i class="material-icons w3-xxxlarge">person_outline</i></div>
         <div class="w3-right">
-          <h3>99</h3>
+          
         </div>
         <div class="w3-clear"></div>
         <h4>Health Status</h4>
       </div>
     </div>
     <div class="w3-quarter">
-      <div class="w3-container w3-teal w3-padding-16">
+      <div id="divTraffic" class="w3-container w3-padding-16">
         <div class="w3-left"><i class="material-icons w3-xxxlarge">my_location</i></div>
         <div class="w3-right">
-          <h3>23</h3>
         </div>
         <div class="w3-clear"></div>
         <h4>Traffic</h4>
       </div>
     </div>
     <div class="w3-quarter">
-      <div class="w3-container w3-orange w3-text-white w3-padding-16">
+      <div id="divEqu" class="w3-container w3-padding-16">
         <div class="w3-left"><i class="material-icons w3-xxxlarge">battery_full</i></div>
         <div class="w3-right">
-          <h3>50</h3>
+          
         </div>
         <div class="w3-clear"></div>
         <h4>Equipment Condition</h4>
@@ -143,7 +153,7 @@ div.end{
   $row1 = mysqli_fetch_assoc($result1) ?>
   <?php $latdata = $row1['Ambulance_latitude']; ?>
   <?php $lngdata = $row1['Ambulance_longitude']; ?>
-  <?php echo $latdata; ?>
+  
 
   <div class="w3-container">
     <h5>Vital Signs </h5>
@@ -183,16 +193,18 @@ div.end{
     <a href="try.php">Try Here</a>
   </div>
   <script>var map, infoWindow;
-  var lat = '<?= $latdata ?>';
-  var lng = '<?= $lngdata ?>';
-    
+  var lat1 = '<?= $latdata ?>';
+  var lng1 = '<?= $lngdata ?>';
+  var lat = parseInt(lat1);
+  var lng = parseInt(lng1);
+   var pos = {lat,lng};
     function initMap() {
       map = new google.maps.Map(document.getElementById('map'), {
         center: {lat, lng},
         zoom: 10
       });
       infoWindow = new google.maps.InfoWindow;
-      
+      infoWindow.setPosition(pos)
     }
       </script>
   <hr>
