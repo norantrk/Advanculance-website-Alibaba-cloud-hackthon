@@ -194,7 +194,7 @@ background-color:green;
       </tr>
       
     </table><br>
-    <a href="try.php">Try Here</a>
+    <a href="form.php">User</a>
   </div>
   <script>var map, infoWindow;
   var lat1 = '<?= $latdata ?>';
