@@ -51,7 +51,7 @@
 				. " Please browse the admin"
 				. " to view the updated data</h3>";
 		<?php
-		header("Location: https://www.advanculance.site/");
+		header("Location: https://www.advanculance.site/index.php");
 		exit();
 		?>
 
