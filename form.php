@@ -34,7 +34,7 @@ div.end{
 <!-- Top container -->
  <div class="container">
   <div>
-  <img src="https://db-measuers.oss-me-central-1.aliyuncs.com/logo/ADVANCULANCE.svg" height="100px" width="400px" style="margin-left: 400px;">
+  <img src="https://db-measuers.oss-me-central-1.aliyuncs.com/logo/logo2.png" height="100px" width="250px" style="margin-left:120px;">
 
   </div>
 </div>
