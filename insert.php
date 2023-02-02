@@ -50,10 +50,6 @@
 			echo "<h3> {Location data stored in a database successfully."
 				. " Please browse the admin"
 				. " to view the updated data</h3>";
-		<?php
-		header("Location: https://www.advanculance.site/index.php");
-		exit();
-		?>
 
 		} else{
 			echo "ERROR: Hush! Sorry $sql2. "
@@ -63,6 +59,11 @@
 		mysqli_close($conn);
 		?>
 	</center>
+	<form action="index.php">
+		 <Center>
+      <input type="submit" value="Main Page">
+    </Center>
+  </form>
 </body>
 
 </html>
