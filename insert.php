@@ -21,7 +21,6 @@
     if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
     }
-    echo "Connected successfully";
 		
 		// Taking all 5 values from the form data(input)
 		$Respiration = $_REQUEST['Respiration'];
