@@ -63,3 +63,43 @@ function w3_close() {
                               'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map);
       }
+
+var i=0;
+      function divchnage(){
+        var divtag=document.getElementById("divStage");
+        var bgcolor=["green","orange","darkseagreen"];
+        divtag.style.backgroundColor=bgcolor[i];
+        i=(i+1)%bgcolor.length;
+      }
+      setInterval(divchnage,7000);
+
+      
+      var j=0;
+      function divHealth(){
+        var divtag=document.getElementById("divHealth");
+        var bgcolor=["green","orange","darkred"];
+        divtag.style.backgroundColor=bgcolor[j];
+        j=(j+1)%bgcolor.length;
+      }
+
+      setInterval(divHealth,5000);
+
+
+      var m=0;
+      function divTraffic(){
+        var divtag=document.getElementById("divTraffic");
+        var bgcolor=["green","orange","darkred"];
+        divtag.style.backgroundColor=bgcolor[m];
+        m=(m+1)%bgcolor.length;
+      }
+
+      setInterval(divTraffic,3000);
+var l=0;
+      function divEqu(){
+        var divtag=document.getElementById("divEqu");
+        var bgcolor=["green","orange","darkred"];
+        divtag.style.backgroundColor=bgcolor[l];
+        l=(l+1)%bgcolor.length;
+      }
+
+      setInterval(divEqu,6000);
