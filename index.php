@@ -13,7 +13,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$query = "select * from patients where id=last_insert_id()";
+$query = "select * from patients";
 $result = mysqli_query($conn,$query);
 $query1 = "select * from ambulances WHERE id_ambulance = '003'";
 $result1 = mysqli_query($conn,$query1);
