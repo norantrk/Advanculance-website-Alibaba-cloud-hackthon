@@ -204,7 +204,11 @@ background-color:green;
         zoom: 10
       });
       infoWindow = new google.maps.InfoWindow;
-      infoWindow.setPosition(pos)
+              infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+            map.setZoom(15);
     }
       </script>
   <hr>
